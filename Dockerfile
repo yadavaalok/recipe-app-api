@@ -29,7 +29,9 @@ RUN python -m venv /py && \
         then /py/bin/pip install -r /tmp/requirements.dev.txt ; \
     fi && \
     rm -rf /tmp && \
-    apk del .tmp-build-deps
+    apk del .tmp-build-deps && \
+    mkdir -p /vol/web/media && \
+    mkdir -p /vol/web/static
 
 # set the path
 ENV PATH="/py/bin:$PATH"
