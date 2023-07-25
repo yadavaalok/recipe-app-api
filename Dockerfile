@@ -32,7 +32,8 @@ RUN python -m venv /py && \
     rm -rf /tmp && \
     apk del .tmp-build-deps && \
     mkdir -p /vol/web/media && \
-    mkdir -p /vol/web/static
+    mkdir -p /vol/web/static && \
+    chmod -R +x /scripts
 
 
 # set the path
